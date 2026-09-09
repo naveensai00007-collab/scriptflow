@@ -1,0 +1,72 @@
+@import "@fontsource/space-grotesk";
+@import "@fontsource/fraunces";
+@import "@fontsource/courier-prime";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FBF9F4;
+  --surface: #FFFFFF;
+  --surface-2: #F4F0E6;
+  --border: #E5DFD3;
+  --text: #181614;
+  --text-muted: #68635B;
+  --primary: #B45309;
+  --primary-hover: #92400E;
+  --primary-fg: #FFFFFF;
+  --accent: #E11D48;
+  --focus: #B45309;
+  --success: #166534;
+  --warning: #B45309;
+  --error: #DC2626;
+}
+
+.dark {
+  --bg: #12110F;
+  --surface: #1A1815;
+  --surface-2: #25221E;
+  --border: #36322C;
+  --text: #F5F2EA;
+  --text-muted: #9E968B;
+  --primary: #D97706;
+  --primary-hover: #F59E0B;
+  --primary-fg: #12110F;
+  --accent: #FB7185;
+  --focus: #D97706;
+  --success: #4ADE80;
+  --warning: #FBBF24;
+  --error: #F87171;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Subtle film grain texture */
+.paper-grain {
+  background-image: radial-gradient(rgba(24, 22, 20, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
